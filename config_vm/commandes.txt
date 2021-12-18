@@ -1,0 +1,5 @@
+ufw enable
+ufw allow 22
+ufw allow 22/tcp
+
+apt install openssh-server
