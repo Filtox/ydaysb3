@@ -101,4 +101,5 @@ Subsystem sftp	/usr/lib/openssh/sftp-server
 touch /root/flag.txt
 echo azerty123 >> /root/flag.txt
 echo "root:p" | chpasswd
+servive sshd restart
 rm -rf ydaysb3_orga
