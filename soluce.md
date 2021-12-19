@@ -1,4 +1,5 @@
 nmap -v -A *ip_serveur*
+nmap -v -A -Pn *ip_serveur*
 
 # Hydra :
 hydra -L users.txt -P passwords.txt ssh://*ip_serveur_ssh* -t 4
