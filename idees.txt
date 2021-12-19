@@ -1,0 +1,2 @@
+si qu'une ip publique :
+ssh sur un autre port, etc
