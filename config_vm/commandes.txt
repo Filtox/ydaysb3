@@ -1,5 +1,2 @@
-ufw enable
-ufw allow 22
-ufw allow 22/tcp
-
-apt install openssh-server
+git clone https://github.com/Filtox/ydaysb3_orga.git
+sudo bash ydaysb3_orga/config_vm/mise_en_place

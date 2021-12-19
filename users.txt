@@ -2,6 +2,7 @@ azerty
 ytreza
 admin
 administrator
+administrador
 ubuntu
 utnubu
 root
