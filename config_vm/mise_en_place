@@ -130,5 +130,5 @@ Subsystem sftp	/usr/lib/openssh/sftp-server
 #	AllowTcpForwarding no
 #	PermitTTY no
 #	ForceCommand cvs server" >> /etc/ssh/sshd_config
-touch /home/root/flag.txt
-echo azerty123 >> /home/root/flag.txt
+touch /root/flag.txt
+echo azerty123 >> /root/flag.txt
