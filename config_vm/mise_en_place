@@ -100,4 +100,4 @@ Subsystem sftp	/usr/lib/openssh/sftp-server
 #	ForceCommand cvs server" >> /etc/ssh/sshd_config
 touch /root/flag.txt
 echo azerty123 >> /root/flag.txt
-rm -rf /ydaysb3_orga
+rm -rf ydaysb3_orga
