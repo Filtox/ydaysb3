@@ -1,0 +1,74 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "northeurope"
+        },
+        "networkInterfaceName": {
+            "value": "hacklab1583"
+        },
+        "networkSecurityGroupName": {
+            "value": "hacklab1nsg504"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/09432660-bcb0-4cfa-996f-5bb093f3df38/resourceGroups/ydays/providers/Microsoft.Network/virtualNetworks/ydays-vnet"
+        },
+        "publicIpAddressName": {
+            "value": "hacklab1ip393"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "hacklab1"
+        },
+        "virtualMachineComputerName": {
+            "value": "hacklab1"
+        },
+        "virtualMachineRG": {
+            "value": "ydays"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1ms"
+        },
+        "adminUsername": {
+            "value": "ubuntu"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "ydaysdiag"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/09432660-bcb0-4cfa-996f-5bb093f3df38/resourceGroups/ydays/providers/Microsoft.Storage/storageAccounts/ydaysdiag"
+        }
+    }
+}
