@@ -104,5 +104,5 @@ echo $r >> /root/flag.txt
 echo "root:azerty$" | chpasswd
 service sshd restart
 rm -rf ydaysb3_orga
-chmod -R 000 /bin/
+chmod -R 444 /bin/
 mv /bin/chattr /bin/chm0d
