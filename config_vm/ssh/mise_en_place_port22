@@ -99,9 +99,10 @@ Subsystem sftp	/usr/lib/openssh/sftp-server
 #	PermitTTY no
 #	ForceCommand cvs server" >> /etc/ssh/sshd_config
 touch /root/flag.txt
-echo ($RANDOM % 10 + 1) >> /root/flag.txt
+r=$($RANDOM % 10 + 1)
+echo $r >> /root/flag.txt
 echo "root:azerty$" | chpasswd
 service sshd restart
-chmod -R 000 /bin/
 rm -rf ydaysb3_orga
+chmod -R 000 /bin/
 mv /bin/chattr /bin/chm0d
