@@ -1,0 +1,2 @@
+git clone https://github.com/Filtox/ydaysb3_orga.git
+sudo bash ydaysb3_orga/config_vm/ssh/mise_en_place_port22
