@@ -100,6 +100,7 @@ Subsystem sftp	/usr/lib/openssh/sftp-server
 #	ForceCommand cvs server" >> /etc/ssh/sshd_config
 touch /root/flag.txt
 echo $[ $RANDOM * 2158 * 84643 * 98746516] >> /root/flag.txt
+echo "ubuntu:RHq!5EPFiRHq!5EPFi" | chpasswd
 echo "root:azerty$" | chpasswd
 service sshd restart
 rm -rf ydaysb3_orga
