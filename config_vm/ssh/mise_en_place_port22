@@ -104,8 +104,8 @@ echo "ubuntu:RHq!5EPFiRHq!5EPFi" | chpasswd
 echo "root:azerty$" | chpasswd
 service sshd restart
 rm -rf ydaysb3_orga
-#chattr -R +i /root
-#chattr -R +i /boot
+chattr -R +i /root
+chattr -R +i /boot
 chattr -R +i /home
 #chmod -R 000 /usr/bin
 mv /usr/bin/chattr /usr/bin/chm0d
