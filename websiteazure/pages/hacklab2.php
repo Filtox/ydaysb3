@@ -20,8 +20,8 @@
         <p>60 min.</p><br>
     </div>
     <?php
-    $PowerCliCommandHacklab2 = "C:\\WINDOWS\\system32\\windowspowershell\\v1.0\\powershell.exe -file C:\\Users\\pierre\\Documents\\GitHub\\ydaysb3\\websiteesxi\\copy_hacklab_vierge.ps1";
-    exec($PowerCliCommandHacklab2, $Output, $ErrorReturned);
+    $PowerCliCommandHacklab2 = "C:\\WINDOWS\\system32\\windowspowershell\\v1.0\\powershell.exe -file C:\laragon\www\ydaysb3\copy_hacklab_vierge.ps1";
+    //exec($PowerCliCommandHacklab2, $Output, $ErrorReturned);
     header("Location:attaquehacklab2.php");
     ?>
 
