@@ -21,10 +21,9 @@
     </div>
 
     <?php
-    $PowerCliCommandHacklab1Remove = "C:\\WINDOWS\\system32\\windowspowershell\\v1.0\\powershell.exe -file C:\\Users\\pierre\\Documents\\GitHub\\ydaysb3\\websiteazure\\stop-azureVMwebhook.ps1";
-    $PowerCliCommandHacklab1 = "C:\\WINDOWS\\system32\\windowspowershell\\v1.0\\powershell.exe -file C:\\Users\\pierre\\Documents\\GitHub\\ydaysb3\\websiteazure\\start-azureVMwebhook.ps1";
-    //exec($PowerCliCommandHacklab1Remove, $Output, $ErrorReturned);
-    exec($PowerCliCommandHacklab1, $Output, $ErrorReturned);
+    shell_exec('/var/www/websiteazure/stop-azureVMwebhook.ps1');
+    sleep(10);
+    shell_exec('/var/www/websiteazure/start-azureVMwebhook.ps1');
     header("Refresh: 50;URL=attaquehacklab1.php");
     ?>
 </body>

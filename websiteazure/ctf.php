@@ -73,8 +73,10 @@
         </form>
 
     </div>
-
+<?php
+shell_exec('/var/www/websiteazure/stop-azureVMwebhook.ps1');
+?>
 </body>
-<?php include("bottom.php"); ?>
+<?php include("bottom.php");?>
 
 </html>
