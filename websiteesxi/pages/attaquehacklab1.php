@@ -31,6 +31,17 @@
             <h4>Durée de la partie</h4>
             <p>60 min.</p><br>
         </div>
+        <div class="row">
+            <h4>Flag</h4>
+            <input style="width: 300px;" type="text" name="" id="">
+        </div>
+        <br>
+        <div class="row">
+            <div class="small-12 medium-6 columns">
+                <input type="hidden" name="action_partie" value="enregistrer_choix">
+                <input type="submit" class="submit" name="enregistrer_choix" value="Valider">
+            </div>
+        </div>
     </div>
 
 
