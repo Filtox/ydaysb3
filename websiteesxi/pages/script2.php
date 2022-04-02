@@ -42,11 +42,14 @@
             id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             id_environnement_virtuel TEXT)";
         $dbco->exec($form);
+        $mdp = "CREATE TABLE mdp(
+            id INT,
+            mdp BIGINT)";
+        $dbco->exec($mdp);
     } catch (PDOException $e) {
         //echo 'Erreur : ' . $e->getMessage();
     }
     if (!empty($_POST['id_environnement_virtuel'] == '2')) {
-        
         header("Location:prepahacklab2.php");
     } elseif (!empty($_POST['id_environnement_virtuel'] == '1')) {
         header("Location:prepahacklab1.php");
