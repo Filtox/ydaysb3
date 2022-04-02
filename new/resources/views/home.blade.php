@@ -72,7 +72,7 @@
 
                 @auth
                 <div class="container">
-                    <form name="formulaire_ctf_alltheday_affiche_partie" method="post" action="{{ route('script2') }}" class="noajax hasajax"><input type="hidden" name="var_ajax" value="form">
+                    <form name="formulaire_ctf_alltheday_affiche_partie" method="get" action="{{ route('script2') }}" class="noajax hasajax"><input type="hidden" name="var_ajax" value="form">
                         <span class="form-hidden"><input name="lang" value="fr" type="hidden"><input name="page" value="ctf_alltheday" type="hidden"><input name="formulaire_action" type="hidden" value="ctf_alltheday_affiche_partie"><input name="formulaire_action_args" type="hidden" value="YehOQ+SaJfFeBXavTocB3164zoPfb0iMoV2HXSWU+DzxUcT1wcf8Ox5FkwPcCqTk0ZBM/juEQFBDburKWtDJUG3dHAvdLSC+0nji"><input name="formulaire_action_sign" type="hidden" value="eb9bd7feb883429bf7ca6dc0a617085c82c9dbec"></span>
                         <h1><b class="color1">Capture the flag</b></h1>
                         <div class="row">

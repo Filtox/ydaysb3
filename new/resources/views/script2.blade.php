@@ -13,7 +13,8 @@
     $dbname = "new";
     $user = "root";
     $pass = "";
-    $id_environnement_virtuel = $_POST["id_environnement_virtuel"];
+    $id_environnement_virtuel = $_GET["id_environnement_virtuel"];
+    /*
     try {
         //On se connecte à la BDD
         $dbco = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $pass);
@@ -46,12 +47,13 @@
     } catch (PDOException $e) {
         //echo 'Erreur : ' . $e->getMessage();
     }
-    if (!empty($_POST['id_environnement_virtuel'] == '2')) {
-        header("Location:prepahacklab2.php");
-    } elseif (!empty($_POST['id_environnement_virtuel'] == '1')) {
-        header("Location:prepahacklab1.php");
+    */
+    if (!empty($_GET['id_environnement_virtuel'] == '2')) {
+        header("Location:hacklab2.blade.php");
+    } elseif (!empty($_GET['id_environnement_virtuel'] == '1')) {
+        header("Location:hacklab1.blade.php");
     } else {
-        header("Location:ctf.php");
+        header("Location:home.blade.php");
     }
     ?>
 </body>

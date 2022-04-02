@@ -22,3 +22,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/script2', [App\Http\Controllers\script2Controller::class, 'script2'])->name('script2');
+
+Route::get('/hacklab1', [App\Http\Controllers\hacklab1::class, 'hacklab1'])->name('hacklab1');
+

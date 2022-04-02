@@ -37,7 +37,6 @@
         //On se connecte à la BDD
         $dbco = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $pass);
         $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         //On crée une table form
         $form = "CREATE TABLE form(
             id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -47,6 +46,7 @@
         //echo 'Erreur : ' . $e->getMessage();
     }
     if (!empty($_POST['id_environnement_virtuel'] == '2')) {
+        
         header("Location:prepahacklab2.php");
     } elseif (!empty($_POST['id_environnement_virtuel'] == '1')) {
         header("Location:prepahacklab1.php");
