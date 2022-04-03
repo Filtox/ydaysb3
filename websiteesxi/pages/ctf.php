@@ -75,6 +75,10 @@
     </div>
 
 </body>
+<script>
+    sessionStorage.clear();
+    localStorage.clear();
+</script>
 <?php include("bottom.php"); ?>
 
 </html>

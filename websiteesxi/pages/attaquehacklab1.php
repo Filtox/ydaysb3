@@ -40,51 +40,28 @@
         //echo "Fin de l'épreuve à " . $time;
         ?>
         <div id="timer1"></div>
-        <!--
-        <script>
-            var today = new Date();
-            var date = today.getHours() + 1 + ":" + today.getMinutes();
-            document.getElementById('timer1').innerHTML = "Fin de l'épreuve à " + date;
-        </script>
--->
         <!--div id="timer"></div>-->
         <div id="timerjs"></div>
         <?php
         header("Refresh: 3600;URL=finhacklab1.php");
         ?>
-        <!--
-        <script>
-            const departMinutes = 60
-            let temps = departMinutes * 60
 
-            const timerElement = document.getElementById("timer")
-
-            setInterval(() => {
-                let minutes = parseInt(temps / 60, 10)
-                let secondes = parseInt(temps % 60, 10)
-
-                minutes = minutes < 10 ? "0" + minutes : minutes
-                secondes = secondes < 10 ? "0" + secondes : secondes
-
-                timerElement.innerText = `${minutes}:${secondes}`
-                temps = temps <= 0 ? 0 : temps - 1
-            }, 1000)
-        </script>
-        -->
-        <div class="row">
-            <h4>Flag</h4>
-            <input onfocus="this.value=''" style="width: 300px;" type="text" name="" id="valider">
-        </div>
-        <br>
-        <div class="row">
-            <div class="small-12 medium-6 columns">
-                <input type="submit" class="submit" onclick="mdp();" name="enregistrer_choix" value="Valider">
+        <form method="post">
+            <div class="row">
+                <h4>Flag</h4><br>
+                <input style="width: 300px;" type="text" name="input">
             </div>
-        </div>
-        <br>
-        <div class="row">
-            <p id="reponse"></p>
-        </div>
+            <br>
+            <input type="submit" class="submit" value="Valider">
+            <br><br>
+            <?php
+            ini_set('display_errors', 'off');
+            if ($_POST['input'] == -4251626237309116968) {
+                echo "Mot de passe correct ! Vous allez être redirigé vers dans quelques secondes.";
+                header("Refresh: 10;URL=finhacklab1.php");
+            }
+            ?>
+        </form>
     </div>
 </body>
 <script>
@@ -107,31 +84,15 @@
         jat = new Date(jat);
     }
     sessionStorage.setItem(key, jat);
-    const afterDelay = jat.getTime() - Date.now() + 120000;
+    const afterDelay = jat.getTime() - Date.now() + 3600000;
     setTimeout(() => {
         sessionStorage.clear();
         localStorage.clear();
         sessionStorage.removeItem(key);
         sessionStorage.removeItem(jat);
         sessionStorage.removeItem(afterDelay);
-        window.location = "ctf.php";
+        window.location = "finhacklab1.php";
     }, afterDelay > 0 ? afterDelay : 0);
-
-    function mdp() {
-        var input = document.getElementById("valider").value;
-        if (input != -4251626237309116968) {
-            document.getElementById("reponse").textContent = "Mauvais mot de passe";
-            document.getElementById("reponse").style.color = "#ff0000";
-        } else if (input == -4251626237309116968) {
-            document.getElementById("reponse").textContent = "Bon mot de passe ! Vous allez être redirigé vers l'accueil dans quelques secondes";
-            document.getElementById("reponse").style.color = "#49be25";
-            setTimeout(function() {
-                window.location.href = "finhacklab1.php";
-            }, 10000);
-        } else {
-            console.log("");
-        }
-    }
 </script>
 <?php include("bottom.php"); ?>
 
