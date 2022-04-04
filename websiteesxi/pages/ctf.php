@@ -4,6 +4,12 @@
 <head>
     <?php include("head.php"); ?>
     <title>Capture the Flag</title>
+    <style>
+        .selectmachine {
+            padding: 5px;
+            background: #f2f4f7;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,10 +24,11 @@
                     <p>Choisissez l'environnement virtuel que vous souhaitez attaquer</p>
                 </div>
                 <div class="small-12 medium-6 columns">
-                    <select id="id_environnement_virtuel" name="id_environnement_virtuel" onchange="$('.vm_description').hide(); $('#id_environnement_virtuel'+$('#id_environnement_virtuel option:selected').val()).show();">
-                        <option value="">sélectionner un environnement virtuel</option>
+                    <select class="selectmachine" id="id_environnement_virtuel" name="id_environnement_virtuel" onchange="$('.vm_description').hide(); $('#id_environnement_virtuel'+$('#id_environnement_virtuel option:selected').val()).show();">
+                        <option value="">Sélectionner un environnement virtuel</option>
                         <option value="1">Hacklab 1</option>
-                        <!--<option value="2">A bittersweet shellfony</option>-->
+                        <!--<option value="2">Metasploitable 2</option>-->
+                        <!--<option value="3">A bittersweet shellfony</option>-->
                     </select>
                 </div>
             </div>
@@ -57,7 +64,7 @@
             <div class="row">
                 <div class="small-12 medium-6 columns">
                     <h4>Attention !</h4>
-                    <p>Une fois votre environnement choisi, veillez à ne pas quitter la page en cours sous peine de suppression totale de votre environnement de travail.</p>
+                    <p>Une fois votre environnement choisi, veuillez ne pas quitter la page en cours sous peine de suppression totale de votre environnement de travail.</p>
                 </div>
             </div>
             <br>
