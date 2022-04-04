@@ -37,12 +37,15 @@
         //On se connecte à la BDD
         $dbco = new PDO("mysql:host=$serveur;dbname=$dbname", $user, $pass);
         $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         //On crée une table form
         $form = "CREATE TABLE form(
             id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             id_environnement_virtuel TEXT)";
         $dbco->exec($form);
+        $mdp = "CREATE TABLE mdp(
+            id INT,
+            mdp BIGINT)";
+        $dbco->exec($mdp);
     } catch (PDOException $e) {
         //echo 'Erreur : ' . $e->getMessage();
     }
