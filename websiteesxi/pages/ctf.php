@@ -27,8 +27,9 @@
                     <select class="selectmachine" id="id_environnement_virtuel" name="id_environnement_virtuel" onchange="$('.vm_description').hide(); $('#id_environnement_virtuel'+$('#id_environnement_virtuel option:selected').val()).show();">
                         <option value="">Sélectionner un environnement virtuel</option>
                         <option value="1">Hacklab 1</option>
-                        <!--<option value="2">Metasploitable 2</option>-->
+                        <!--<option value="2">A bittersweet shellfony</option>-->
                         <!--<option value="3">A bittersweet shellfony</option>-->
+                        <option value="4">Metasploitable 2</option>
                     </select>
                 </div>
             </div>
@@ -41,7 +42,7 @@
                         <p>Cette machine est la plus facile d'accès que vous retrouverez, elle est attaquable via une méthode très commune de connexion à distance.</p>
                         <p>Le mot de passe à récupérer est dans le fichier flag.txt</p>
                         <h4>Durée de la partie</h4>
-                        <p>60 min.</p><br>
+                        <p>45 minutes.</p><br>
                     </div>
                     <div class="vm_description" id="id_environnement_virtuel2" style="display: none;">
                         <h4>Description</h4>
@@ -58,6 +59,14 @@
                         <p></p>
                         <h4>Durée de la partie</h4>
                         <p>240 min.</p><br>
+                    </div>
+                    <div class="vm_description" id="id_environnement_virtuel4" style="display: none;">
+                        <h4>Description</h4>
+                        <p></p>
+                        <p>La machine virtuelle Metasploitable est une version volontairement vulnérable de Ubuntu Linux conçue pour tester les outils de sécurité et de démontrer les vulnérabilités courantes.</p>
+                        <p></p>
+                        <h4>Durée de la partie</h4>
+                        <p>60 minutes.</p><br>
                     </div>
                 </div>
             </div>

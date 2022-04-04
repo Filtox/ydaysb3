@@ -26,15 +26,15 @@
             <p>Le mot de passe à récupérer est dans le fichier flag.txt</p>
             <p>Adresse IP de la machine : <b>192.168.0.18</b></p>
             <h4>Durée de la partie</h4>
-            <p>60 min.</p><br>
+            <p>45 minutes.</p><br>
         </div>
         <?php
         date_default_timezone_set('Europe/Paris');
-        $time = date('h:i', time() + 3600);
+        $time = date('h:i', time() + 2700);
         ?>
         <div id="timer1"></div>
         <?php
-        header("Refresh: 3600;URL=finhacklab1.php");
+        header("Refresh: 2700;URL=finhacklab1.php");
         ?>
         <form method="post">
             <div class="row">
@@ -74,7 +74,7 @@
         jat = new Date(jat);
     }
     sessionStorage.setItem(key, jat);
-    const afterDelay = jat.getTime() - Date.now() + 3600000;
+    const afterDelay = jat.getTime() - Date.now() + 2700000;
     setTimeout(() => {
         sessionStorage.clear();
         localStorage.clear();
