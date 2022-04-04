@@ -1,10 +1,8 @@
 <html lang="en">
-
 <head>
     <?php include("head.php"); ?>
     <title>Votre environnement de travail est prêt</title>
 </head>
-
 <body>
     <?php include("navbar.php"); ?>
     <div class="espace"></div>
@@ -13,7 +11,6 @@
         <div class="row">
             <h2>Hacklab 1</h2>
         </div>
-
         <div class="espace"></div>
         <p>Vous avez choisi l'environnement virtuel <b>Hacklab1</b>. Votre environnement est prêt.</p>
         <div>
@@ -31,21 +28,14 @@
             <h4>Durée de la partie</h4>
             <p>60 min.</p><br>
         </div>
-        <!--
-        <h6>Temps restants :</h6>
--->
         <?php
         date_default_timezone_set('Europe/Paris');
         $time = date('h:i', time() + 3600);
-        //echo "Fin de l'épreuve à " . $time;
         ?>
         <div id="timer1"></div>
-        <!--div id="timer"></div>-->
-        <div id="timerjs"></div>
         <?php
         header("Refresh: 3600;URL=finhacklab1.php");
         ?>
-
         <form method="post">
             <div class="row">
                 <h4>Flag</h4><br>
