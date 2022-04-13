@@ -13,15 +13,15 @@
         <div>
             <h4>Description</h4>
             <p></p>
-            <p>Cette machine est la plus facile d'accès que vous retrouverez, elle est attaquable via une méthode très commune de connexion à distance.</p>
+            <p>La machine virtuelle Metasploitable est une version volontairement vulnérable de Ubuntu Linux conçue pour tester les outils de sécurité et de démontrer les vulnérabilités courantes.</p>
             <p>Le mot de passe à récupérer est dans le fichier flag.txt</p>
             <h4>Durée de la partie</h4>
-            <p>45 min.</p><br>
+            <p>60 min.</p><br>
         </div>
     </div>
 
     <?php
-    header("Refresh: 1;URL=hacklab1.php");
+    header("Refresh: 1;URL=hacklab4.php");
     ?>
 </body>
 <?php include("bottom.php"); ?>

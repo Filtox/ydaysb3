@@ -1,41 +1,18 @@
 <html lang="en">
-
 <head>
     <?php include("head.php"); ?>
     <title>Votre environnement de travail est prêt</title>
-    <style>
-        .selectmachine {
-            padding: 5px;
-            background: #f2f4f7;
-        }
-
-        .button {
-            padding: 10px 50px;
-            margin: 15px 30px;
-            text-transform: uppercase;
-            text-align: center;
-            position: relative;
-            background-color: #212529;
-            color: white;
-            border-radius: 10px;
-        }
-
-        .button:hover {
-            opacity: 0.7;
-        }
-    </style>
 </head>
-
 <body>
     <?php include("navbar.php"); ?>
     <div class="espace"></div>
 
     <div class="container">
         <div class="row">
-            <h2>Hacklab 1</h2>
+            <h2>Metasploitable 2</h2>
         </div>
         <div class="espace"></div>
-        <p>Vous avez choisi l'environnement virtuel <b>Hacklab1</b>. Votre environnement est prêt.</p>
+        <p>Vous avez choisi l'environnement virtuel <b>Metasploitable 2</b>. Votre environnement est prêt.</p>
         <div>
             <div class="row">
                 <div class="small-12 medium-6 columns">
@@ -45,19 +22,19 @@
             </div>
             <h4>Description</h4>
             <p></p>
-            <p>Cette machine est la plus facile d'accès que vous retrouverez, elle est attaquable via une méthode très commune de connexion à distance.</p>
+            <p>La machine virtuelle Metasploitable est une version volontairement vulnérable de Ubuntu Linux conçue pour tester les outils de sécurité et de démontrer les vulnérabilités courantes.</p>
             <p>Le mot de passe à récupérer est dans le fichier flag.txt</p>
-            <p>Adresse IP de la machine : <b>192.168.0.18</b></p>
+            <p>Adresse IP de la machine : <b>192.168.0.30</b></p>
             <h4>Durée de la partie</h4>
             <p>45 minutes.</p><br>
         </div>
         <?php
         date_default_timezone_set('Europe/Paris');
-        $time = date('h:i', time() + 2700);
+        $time = date('h:i', time() + 3600);
         ?>
         <div id="timer1"></div>
         <?php
-        header("Refresh: 2700;URL=finhacklab1.php");
+        header("Refresh: 3600;URL=finhacklab4.php");
         ?>
         <form method="post">
             <div class="row">
@@ -65,13 +42,13 @@
                 <input style="width: 300px;" type="text" name="input">
             </div>
             <br>
-            <input type="submit" class="submit button" value="Valider">
+            <input type="submit" class="submit" value="Valider">
             <br><br>
             <?php
             ini_set('display_errors', 'off');
-            if ($_POST['input'] == -4251626237309116968) {
+            if ($_POST['input'] == 17249871245988291857258796625719) {
                 echo "Mot de passe correct ! Vous allez être redirigé vers dans quelques secondes.";
-                header("Refresh: 10;URL=finhacklab1.php");
+                header("Refresh: 10;URL=finhacklab4.php");
             }
             ?>
         </form>
@@ -97,14 +74,14 @@
         jat = new Date(jat);
     }
     sessionStorage.setItem(key, jat);
-    const afterDelay = jat.getTime() - Date.now() + 2700000;
+    const afterDelay = jat.getTime() - Date.now() + 3600000;
     setTimeout(() => {
         sessionStorage.clear();
         localStorage.clear();
         sessionStorage.removeItem(key);
         sessionStorage.removeItem(jat);
         sessionStorage.removeItem(afterDelay);
-        window.location = "finhacklab1.php";
+        window.location = "finhacklab4.php";
     }, afterDelay > 0 ? afterDelay : 0);
 </script>
 <?php include("bottom.php"); ?>

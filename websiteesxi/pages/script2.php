@@ -49,10 +49,14 @@
     } catch (PDOException $e) {
         //echo 'Erreur : ' . $e->getMessage();
     }
-    if (!empty($_POST['id_environnement_virtuel'] == '2')) {
-        header("Location:prepahacklab2.php");
-    } elseif (!empty($_POST['id_environnement_virtuel'] == '1')) {
+    if (!empty($_POST['id_environnement_virtuel'] == '1')) {
         header("Location:prepahacklab1.php");
+    } elseif (!empty($_POST['id_environnement_virtuel'] == '2')) {
+        header("Location:prepahacklab2.php");
+    } elseif (!empty($_POST['id_environnement_virtuel'] == '3')) {
+        header("Location:prepahacklab3.php");
+    } elseif (!empty($_POST['id_environnement_virtuel'] == '4')) {
+        header("Location:prepahacklab4.php");
     } else {
         header("Location:ctf.php");
     }
